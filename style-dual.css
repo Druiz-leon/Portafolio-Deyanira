@@ -259,7 +259,7 @@ input:checked + .slider:before {
     margin-bottom: 1rem;
 }
 
-/* ===== Sección Contacto ===== */
+/* ===== Sección Contacto ====== */
 .contact-container {
     max-width: 600px; /* Limita el ancho para que no sea tan largo */
     margin: 0 auto; /* Centra el contenedor */

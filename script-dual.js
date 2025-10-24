@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     }
 
-    /* ===== Resaltado de Navegación Activa al Hacer Scroll ===== */
+    /* ===== Resaltado de Navegación Activa al Hacer Scroll ====== */
     // ... (Tu código de 'highlightNavLink' no necesita cambios) ...
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
