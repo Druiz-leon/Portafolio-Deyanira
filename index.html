@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deyanira Ruiz - Portafolio Dual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style-dual.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-logo">Deyanira Ruiz</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active-link">Inicio</a></li>
+                <li class="nav-item"><a href="#expertise" class="nav-link">Habilidades</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">Proyectos</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Formación</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <i class="fa-solid fa-laptop-code"></i>
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider round"></span>
+                </label>
+                <i class="fa-solid fa-flask"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" id="home">
+            <div class="home-container container grid">
+                <div class="home-content">
+                    <h1>Hola, soy Deyanira Ruiz</h1>
+                    <h3>Soy <span class="typing-text"></span></h3>
+                    <p>
+                        Breve descripción sobre ti. Apasionado por la tecnología,
+                        la ciencia de datos y el desarrollo web.
+                    </p>
+                    <div class="home-actions">
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:tu-email@dominio.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                        <a href="CV-DeyaniraRuiz.pdf" class="button" download>
+                            Descargar CV <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="expertise">
+            <h2 class="section-title">Mi Experiencia</h2>
+            <span class="section-subtitle">Lo que sé hacer</span>
+
+            <div class="tech-content">
+                <div class="tech-icons-container container">
+                    <i class="fa-brands fa-python" title="Python"></i>
+                    <i class="fa-brands fa-html5" title="HTML5"></i>
+                    <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                    <i class="fa-brands fa-js" title="JavaScript"></i>
+                    <i class="fa-solid fa-c" title="C"></i>
+                    <i class="fa-brands fa-java" title="Java"></i>
+                    <i class="fa-solid fa-database" title="MySQL"></i>
+                </div>
+                <div class="expertise-container container grid">
+                    <div class="skill-card">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h3>Desarrollo Web</h3>
+                        <p>HTML, CSS, JavaScript, y experiencia en Git/GitHub para control de versiones.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Backend</h3>
+                        <p>Desarrollo de APIs REST con Java (Spring Boot) y manejo de bases de datos (MySQL).</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-toolbox"></i>
+                        <h3>Herramientas</h3>
+                        <p>Manejo de Git, GitHub, Formspree, y metodologías ágiles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="science-content">
+                <div class="tech-icons-container container">
+                    <i class="fa-solid fa-flask-vial" title="Química"></i>
+                    <i class="fa-solid fa-chart-line" title="Análisis de Datos"></i>
+                    <i class="fa-solid fa-microscope" title="Laboratorio"></i>
+                    <i class="fa-brands fa-python" title="Python (Científico)"></i>
+                </div>
+                <div class="expertise-container container grid">
+                    <div class="skill-card">
+                        <i class="fa-solid fa-flask"></i>
+                        <h3>Investigación Científica</h3>
+                        <p>Análisis de datos, cálculos teóricos (DFT), y síntesis de materiales (Puntos de Carbono).</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-atom"></i>
+                        <h3>Síntesis y Caracterización</h3>
+                        <p>Experiencia en síntesis hidrotérmica y caracterización por UV-Vis, IR, Fluorescencia.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-book"></i>
+                        <h3>Documentación Académica</h3>
+                        <p>Manejo avanzado de LaTeX (Overleaf) y redacción de artículos científicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="work">
+            <h2 class="section-title">Proyectos</h2>
+            <span class="section-subtitle">Mi trabajo reciente</span>
+
+            <div class="tech-content">
+                <div class="work-container container grid">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Portafolio+Dual" alt="Imagen del proyecto" class="project-img">
+                        <div class="project-data">
+                            <h3 class="project-title">Proyecto 1: Portafolio Dual (Este sitio)</h3>
+                            <p>Sitio web con cambio de tema (CSS/JS) para mostrar dualidad profesional.</p>
+                            <a href="#" class="project-button">Ver GitHub <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=API+con+Spring+Boot" alt="Imagen del proyecto" class="project-img">
+                        <div class="project-data">
+                            <h3 class="project-title">Proyecto 2: API REST de Tareas</h3>
+                            <p>API con Java (Spring Boot) para un gestor de tareas.</p>
+                            <a href="#" class="project-button">Ver GitHub <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="science-content">
+                <div class="work-container container grid">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Sensor+de+Carbon+Dots" alt="Imagen del proyecto 1" class="project-img">
+                        <div class="project-data">
+                            <h3 class="project-title">Proyecto 1: Sensor de Puntos de Carbono</h3>
+                            <p>Investigación sobre N-CDs y P-CDs para la detección de colorantes alimentarios.</p>
+                            <a href="#" class="project-button">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Tesis+en+LaTeX" alt="Imagen del proyecto 3" class="project-img">
+                        <div class="project-data">
+                            <h3 class="project-title">Proyecto 2: Documento de Tesis</h3>
+                            <p>Maquetación avanzada de documento académico utilizando LaTeX en Overleaf.</p>
+                            <a href="#" class="project-button">Ver PDF <i class="fa-solid fa-file-pdf"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2 class="section-title">Experiencia</h2>
+            <span class="section-subtitle">Mi trayectoria</span>
+
+            <div class="tech-content">
+                <div class="experience-container container">
+                    <div class="timeline-item">
+                        <h4>2025 - Presente</h4>
+                        <p><strong>Científico de Datos</strong> - Oracle Next Education</p>
+                        <p>Creación de páginas web estáticas y landing pages para clientes.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2025 - 2024</h4>
+                        <p><strong>Bootcamp Java Full-Stack </strong> - Generation Mexico</p>
+                        <p>Formación intensiva en desarrollo frontend y backend.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2023 - 2024</h4>
+                        <p><strong>Desarrollador Frontend </strong> - Oracle Next Education</p>
+                        <p>Formación intensiva en desarrollo frontend.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="science-content">
+                <div class="experience-container container">
+                    <div class="timeline-item">
+                        <h4>2023 - Presente</h4>
+                        <p><strong>Maestría en Ingeniería y Ciencias Aplicadas</strong> - CIICAp-UAEM</p>
+                        <p>Investigación enfocada en síntesis de nanomateriales (Puntos de Carbono).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2021 - 2022</h4>
+                        <p><strong>Asistente de Laboratorio</strong> - CIICAp-UAEM</p>
+                        <p>Preparación de reactivos, calibración de equipos y asistencia en experimentos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2 class="section-title">Contáctame</h2>
+            <span class="section-subtitle">Ponte en contacto</span>
+            <div class="contact-container container">
+                <p>¿Tienes un proyecto en mente o quieres colaborar? Envíame un mensaje.</p>
+                <a href="mailto:ruiz.leon.deyanira@gmail.com" class="button">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="tech-content">
+            <div class="footer-container container">
+                <p>Diseñado y codeado por Deyanira Ruiz. &copy; 2025.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/deyanira-ruiz-91a32623b/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Druiz-leon" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="science-content">
+            <div class="footer-container container">
+                <p>Investigación y desarrollo por Deyanira Ruiz. &copy; 2025.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/deyanira-ruiz-91a32623b/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://orcid.org/0009-0002-3890-6919" aria-label="ORCID" target="_blank"><i class="fa-solid fa-book"></i></a> </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-dual.js"></script>
+</body>
+</html>
