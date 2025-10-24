@@ -1,0 +1,293 @@
+/* ===== Variables (Tema Ciencia - Default) ===== */
+:root {
+    --bg-color: #101010; /* Negro más profundo */
+    --bg-color-light: #1e1e1e;
+    --primary-color: #00FFFF; /* Cian Neón */
+    --text-color: #e0e0e0;
+    --text-color-secondary: #999999;
+    
+    --font-title: "Roboto Mono", monospace; /* Fuente Monospace (Código) */
+    --font-body: "Roboto Mono", monospace;
+    --home-bg-image: url('fondo-tech.jpg'); /* Fondo Matriz/Circuito */
+    --card-border-radius: 0px; /* Angular */
+    --card-hover-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* ===== Variables (Tema Ciencia - Activado) ===== */
+body.science-mode {
+    --bg-color: #1a1a1a;
+    --bg-color-light: #2c2c2c;
+    --primary-color: #00aaff;
+    --text-color: #f0f0f0;
+    --text-color-secondary: #aaaaaa;
+    
+    --font-title: "Playfair Display", serif; /* Fuente Serif (Académica) */
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --home-bg-image: url('fondo-2.jpg'); /* Fondo Neurona */
+    --card-border-radius: 16px; /* Redondeado */
+    --card-hover-shadow: 0 5px 25px rgba(0, 170, 255, 0.3);
+}
+
+
+
+/* ===== Reseteo Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color .3s, color .3s;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-family: var(--font-title);
+    transition: color .3s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color .3s;
+}
+ul { list-style: none; }
+img { max-width: 100%; height: auto; }
+
+/* ===== Clases Reutilizables ===== */
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.section { padding: 6rem 0 2rem; }
+.section-title { font-size: 2.25rem; text-align: center; }
+.section-subtitle {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.grid { display: grid; gap: 1.5rem; }
+
+/* Por defecto (Modo Tech), ocultamos el contenido de Ciencia */
+.science-content {
+    display: none;
+}
+
+/* Cuando el body tiene la clase .science-mode... */
+body.science-mode .science-content {
+    display: block; /* Mostramos el contenido de Ciencia */
+}
+
+body.science-mode .tech-content {
+    display: none; /* Ocultamos el contenido de Tech */
+}
+
+/* ===== Header y Navegación ===== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+}
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-color); }
+.nav-menu { display: flex; gap: 2rem; }
+.nav-link {
+    color: var(--text-color-secondary);
+    font-weight: 500;
+    transition: color .3s;
+}
+.nav-link:hover,
+.nav-link.active-link {
+    color: var(--primary-color);
+}
+
+/* ===== ESTILOS PARA EL INTERRUPTOR ===== */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color-secondary);
+}
+.theme-switch-wrapper .fa-laptop-code { color: #00FFFF; } 
+.theme-switch-wrapper .fa-flask { color: #00aaff; }
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Ancho */
+    height: 26px; /* Alto */
+}
+.theme-switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--bg-color-light);
+    transition: .4s;
+    border-radius: 26px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+/* ======================================= */
+/* ===== Sección Inicio (Hero) ===== */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* La imagen se toma de la variable */
+    background-image: var(--home-bg-image); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+    transition: background-image .4s;
+}
+.home-container { position: relative; z-index: 1; }
+.home-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+.home-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 1.5rem;
+}
+.typing-text { color: var(--primary-color); font-weight: 700; }
+
+/* (Copia y pega tus estilos para .home-actions, .social-links, etc. aquí) */
+.home-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--text-color-secondary);
+    transition: color .3s;
+}
+.social-links a:hover { color: var(--primary-color); }
+
+/* Botones (Usa variables) */
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color .3s;
+}
+.button:hover {
+    filter: brightness(1.2);
+}
+/* Botón pequeño de CV */
+.home-content .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== Sección Habilidades (Usa variables) ===== */
+.tech-icons-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que se ajusten en móviles */
+    justify-content: center; /* Centra los iconos */
+    gap: 1.5rem; /* Espacio entre iconos */
+    margin-bottom: 3rem;
+}
+.expertise-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.skill-card {
+    background-color: var(--bg-color-light);
+    padding: 2rem;
+    text-align: center;
+    transition: transform .3s, box-shadow .3s, border-radius .3s;
+    /* Las variables controlan el estilo */
+    border-radius: var(--card-border-radius); 
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ===== Sección Contacto ===== */
+.contact-container {
+    max-width: 600px; /* Limita el ancho para que no sea tan largo */
+    margin: 0 auto; /* Centra el contenedor */
+    text-align: center; /* Centra el texto y el botón */
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 2rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: var(--bg-color-light);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    transition: background-color .3s; /* Para el cambio de tema */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+    gap: 1rem; /* Espacio por si se envuelve */
+}
+
+.footer-container p {
+    color: var(--text-color-secondary);
+}
