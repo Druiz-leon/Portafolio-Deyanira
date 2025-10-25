@@ -272,6 +272,46 @@ input:checked + .slider:before {
     margin-bottom: 2rem;
 }
 
+.project-img {
+    width: 100%;       /* Ocupa el 100% del ancho de la tarjeta */
+    height: 300px;     /* Mantiene una altura fija para uniformidad */
+    object-fit: cover; /* Rellena el espacio sin deformarse (recorta si es necesario) */
+}
+
+.project-data {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* NUEVO: Contenedor para los enlaces del proyecto */
+.project-links {
+    display: flex;       /* Pone los enlaces en fila */
+    flex-wrap: wrap;     /* Los apila en pantallas pequeñas si no caben */
+    gap: 1.5rem;         /* Espacio entre "Ver Demo" y "Ver GitHub" */
+    margin-top: 1rem;    /* Espacio entre la descripción y los enlaces */
+}
+
+/* ESTILO para los enlaces del proyecto */
+.project-button {
+    display: inline-flex; /* Permite alinear el texto y el icono */
+    align-items: center;
+    gap: 0.35rem;         /* Espacio entre el texto y el icono */
+    
+    color: var(--primary-color); /* Usa el color del tema activo */
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: filter .3s;
+}
+
+.project-button:hover {
+    text-decoration: underline;
+    filter: brightness(1.2); /* Un leve brillo al pasar el ratón */
+}
+
 /* ===== Footer ===== */
 .footer {
     background-color: var(--bg-color-light);
