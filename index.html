@@ -3,113 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deyanira Ruiz - Portafolio Dual</title>
+    <title>Deyanira Ruiz - Portafolio de Desarrollo Web</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style-dual.css">
 </head>
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="#home" class="nav-logo">Deyanira Ruiz</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link active-link">Inicio</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Sobre Mí</a></li>
                 <li class="nav-item"><a href="#expertise" class="nav-link">Habilidades</a></li>
                 <li class="nav-item"><a href="#work" class="nav-link">Proyectos</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link">Formación</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Formación</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="theme-switch-wrapper">
-                <i class="fa-solid fa-laptop-code"></i>
-                <label class="theme-switch" for="theme-toggle">
-                    <input type="checkbox" id="theme-toggle" />
-                    <span class="slider round"></span>
-                </label>
-                <i class="fa-solid fa-flask"></i>
-            </div>
         </nav>
     </header>
 
     <main>
-        <section class="section" id="home">
+        <section class="section home-section dark-bg" id="home">
             <div class="home-container container grid">
-                <div class="home-content">
-                    <h1>Hola, soy Deyanira Ruiz</h1>
-                    <h3>Soy <span class="typing-text"></span></h3>
-                    <p>
-                        Apasionada por la tecnología,
-                        la ciencia de datos y el desarrollo web.
+                
+                <div class="home-content-left">
+                    <p class="greeting">¡Hola, soy</p>
+                    <h1>Deyanira Ruiz</h1>
+                    <h3 class="web-developer-text">Desarrolladora <span class="typing-text"></span></h3>
+                    
+                    <p class="intro-paragraph">
+                        Convierto ideas en experiencias digitales robustas y fluidas. Mi enfoque en el desarrollo web combina creatividad con precisión técnica.
                     </p>
+
                     <div class="home-actions">
-                        <div class="social-links">
-                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                            <a href="mailto:tu-email@dominio.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
-                        <a href="CV-DeyaniraRuiz.pdf" class="button" download>
+                        <a href="CV-DeyaniraRuiz.pdf" class="button button-primary" download>
                             Descargar CV <i class="fa-solid fa-download"></i>
                         </a>
+                        <div class="social-links-home">
+                            <a href="https://www.linkedin.com/in/deyanira-ruiz-91a32623b/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Druiz-leon" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:ruiz.leon.deyanira@gmail.com" aria-label="Email" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
                     </div>
+                </div>
+
+                <div class="home-illustration">
+                    <img src="deyanira-ilustracion.png" alt="Ilustración de Deyanira Ruiz" class="home-img">
+                </div>
+
+                <div class="home-content-right">
+                    <div class="right-section">
+                        <h4>SOBRE MÍ</h4>
+                        <p>
+                            Apasionada por el desarrollo Full-Stack, con enfoque en Java y el diseño de interfaces.
+                        </p>
+                        <a href="#about" class="read-more">CONOCER MÁS <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="right-section">
+                        <h4>MIS PROYECTOS</h4>
+                        <p>
+                            Explora mi trabajo reciente en proyectos de desarrollo web y APIs.
+                        </p>
+                        <a href="#work" class="read-more">VER PORTAFOLIO <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#about" class="scroll-down-button" aria-label="Scroll down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+        <section class="section" id="about">
+            <h2 class="section-title">Sobre Mí</h2>
+            <span class="section-subtitle">Conoce mi trayectoria</span>
+            <div class="about-container container">
+                <p>
+                    Soy una desarrolladora Full-Stack en formación apasionada por encontrar soluciones innovadoras y eficientes. Mi experiencia se ha enfocado en el diseño de interfaces web con <strong>HTML, CSS y JavaScript</strong>. Con una sólida base en metodologías ágiles, busco fusionar mi habilidad técnica con mi pensamiento analítico adquirido en mi trayectoria académica en <strong>Ciencias Aplicadas y Ciencia de Datos</strong> . Siempre estoy lista para enfrentar nuevos desafíos y contribuir con proyectos significativos.
+                </p>
+                <div class="about-stats">
                 </div>
             </div>
         </section>
-
         <section class="section" id="expertise">
             <h2 class="section-title">Mi Experiencia</h2>
             <span class="section-subtitle">Lo que sé hacer</span>
-
-            <div class="tech-content">
-                <div class="tech-icons-container container">
-                    <i class="fa-brands fa-python" title="Python"></i>
-                    <i class="fa-brands fa-html5" title="HTML5"></i>
-                    <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                    <i class="fa-brands fa-js" title="JavaScript"></i>
-                    <i class="fa-solid fa-c" title="C"></i>
-                    <i class="fa-brands fa-java" title="Java"></i>
-                    <i class="fa-solid fa-database" title="MySQL"></i>
+            <div class="expertise-container container grid">
+                <div class="skill-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>HTML, CSS, JavaScript, y experiencia en Git/GitHub para control de versiones.</p>
                 </div>
-                <div class="expertise-container container grid">
-                    <div class="skill-card">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <h3>Desarrollo Web</h3>
-                        <p>HTML, CSS, JavaScript, y experiencia en Git/GitHub para control de versiones.</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-server"></i>
-                        <h3>Backend</h3>
-                        <p>Desarrollo de APIs REST con Java (Spring Boot) y manejo de bases de datos (MySQL).</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-toolbox"></i>
-                        <h3>Herramientas</h3>
-                        <p>Manejo de Git, GitHub, Formspree, y metodologías ágiles.</p>
-                    </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-server"></i>
+                    <h3>Backend</h3>
+                    <p>Desarrollo de APIs REST con Java (Spring Boot) y manejo de bases de datos (MySQL).</p>
                 </div>
-            </div>
-
-            <div class="science-content">
-                <div class="tech-icons-container container">
-                    <i class="fa-solid fa-flask-vial" title="Química"></i>
-                    <i class="fa-solid fa-chart-line" title="Análisis de Datos"></i>
-                    <i class="fa-solid fa-microscope" title="Laboratorio"></i>
-                    <i class="fa-brands fa-python" title="Python (Científico)"></i>
-                </div>
-                <div class="expertise-container container grid">
-                    <div class="skill-card">
-                        <i class="fa-solid fa-flask"></i>
-                        <h3>Investigación Científica</h3>
-                        <p>Análisis de datos, cálculos teóricos (DFT), y síntesis de materiales (Puntos de Carbono).</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-atom"></i>
-                        <h3>Síntesis y Caracterización</h3>
-                        <p>Experiencia en síntesis hidrotérmica y caracterización por UV-Vis, IR, Fluorescencia.</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fa-solid fa-book"></i>
-                        <h3>Documentación Académica</h3>
-                        <p>Manejo avanzado de LaTeX (Overleaf) y redacción de artículos científicos.</p>
-                    </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-toolbox"></i>
+                    <h3>Herramientas</h3>
+                    <p>Manejo de Git, GitHub, Formspree, y metodologías ágiles.</p>
                 </div>
             </div>
         </section>
@@ -117,151 +114,196 @@
         <section class="section" id="work">
             <h2 class="section-title">Proyectos</h2>
             <span class="section-subtitle">Mi trabajo reciente</span>
-
-        <div class="tech-content">
             <div class="work-container container grid">
 
                 <div class="project-card">
-                    <!img src="https://via.placeholder.com/300x200.png?text=Portafolio+Dual" alt="Imagen del proyecto" class="project-img">
-                    <div class="project-data">
-                        <h3 class="project-title">Portafolio Dual (Este sitio)</h3>
-                        <p>Sitio web con cambio de tema (CSS/JS) para mostrar dualidad profesional.</p>
-                
-                        <div class="project-links">
-                            <a href="[TU_GITHUB_PORTAFOLIO]" class="project-button" target="_blank">
-                            Ver GitHub <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-
+                    <div class="project-card-header">
+                        <span>Proyecto Full-Stack / E-commerce</span>
                     </div>
-                </div>
-                <div class="project-card">
-                    <img src="Woof&BARF.png" alt="Imagen del proyecto" class="project-img">
-                    <div class="project-data">
-                        <h3 class="project-title">Woof & BARF</h3>
-                        <p>E-commerce de comida canina Barf haciendo uso de una API con Java (Spring Boot) para un gestor de tareas.</p>
-
-                        <div class="project-links">
-                            <a href="https://github.com/Arukado69/Proyecto-Integrador.git" class="project-button" target="_blank">
-                            Ver GitHub <i class="fa-brands fa-github"></i>
-                            </a>
+                    <div class="project-card-main-content">
+                        <img src="Woof&BARF.png" alt="Imagen del proyecto Woof & BARF" class="project-img">
+                        <div class="project-data">
+                            <span class="project-category">E-commerce / Backend API</span> 
+                            <h3 class="project-title">Woof & BARF</h3>
+                            <p class="project-description">
+                                E-commerce de comida canina Barf haciendo uso de una API con Java (Spring Boot) para la gestión de tareas y productos. Proyecto Full-Stack integrador.
+                            </p>
+                            <div class="skill-bars-container">
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-java" style="color: #639CBF;"></i>
+                                        <span>Java / Spring Boot</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 85%; background-color: #639CBF;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-solid fa-database" style="color: #84C1D9;"></i>
+                                        <span>MySQL</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 70%; background-color: #84C1D9;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-html5" style="color: #AFBF75;"></i>
+                                        <span>HTML / CSS</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 60%; background-color: #AFBF75;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-links project-links-with-buttons"> 
+                                <a href="https://github.com/Arukado69/Proyecto-Integrador.git" class="project-button button-filled" target="_blank">
+                                    Ver GitHub
+                                </a>
+                            </div>
                         </div>
-
                     </div>
                 </div>
         
                 <div class="project-card">
-                     <img src="sendera-sport.png" alt="Captura de pantalla del e-commerce Sendera Sport" class="project-img">
-                    <div class="project-data">
-                        <h3 class="project-title">Sendera </h3>
-                         <p>E-commerce "Sendera Sport", fue una tienda de productos para personas aficiondas a la aventura en la montaña.</p>
-                        <div class="project-links">
-                            <a href="https://hackathon01-seven.vercel.app/" class="project-button" target="_blank">
-                             Ver Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                            <a href="https://github.com/Druiz-leon/hackathon01.git" class="project-button" target="_blank">
-                             Ver GitHub <i class="fa-brands fa-github"></i>
-                            </a>
+                    <div class="project-card-header">
+                        <span>Proyecto de Desarrollo Web</span>
+                    </div>
+                    <div class="project-card-main-content">
+                        <img src="sendera-sport.png" alt="Captura de pantalla del e-commerce Sendera Sport" class="project-img">
+                        <div class="project-data">
+                            <span class="project-category">E-commerce / Frontend</span> 
+                            <h3 class="project-title">Sendera Sport</h3>
+                            <p class="project-description">
+                                E-commerce "Sendera Sport", fue una tienda de productos para personas aficionadas a la aventura en la montaña.
+                            </p>
+                            <div class="skill-bars-container">
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-html5" style="color: #AFBF75;"></i>
+                                        <span>HTML5</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 90%; background-color: #AFBF75;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-css3-alt" style="color: #639CBF;"></i>
+                                        <span>CSS3</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 80%; background-color: #639CBF;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-js" style="color: #8A8C3B;"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 60%; background-color: #8A8C3B;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-links project-links-with-buttons"> 
+                                <a href="https://hackathon01-seven.vercel.app/" class="project-button button-filled" target="_blank">
+                                    Ver Demo 
+                                </a>
+                                <a href="https://github.com/Druiz-leon/hackathon01.git" class="project-button button-filled" target="_blank">
+                                    Ver GitHub 
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                     <img src="westeros-blog.png" alt="Captura de pantalla del e-commerce Sendera Sport" class="project-img">
-                    <div class="project-data">
-                        <h3 class="project-title">Westeros Blog </h3>
-                         <p>sitio web estático desarrollado con pasión por un equipo de especialistas en Game of Thrones. 
-                            Nuestro objetivo es compartir información, curiosidades y análisis profundos sobre la saga</p>
-                        <div class="project-links">
-                            <a href="https://sitio-del-blog.vercel.app/" class="project-button" target="_blank">
-                             Ver Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                            <a href="https://github.com/Druiz-leon/sitio-del-blog.git" class="project-button" target="_blank">
-                             Ver GitHub <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
+                    <div class="project-card-header">
+                        <span>Proyecto de Desarrollo Web</span> 
                     </div>
-                </div>
-
-                <div class="project-card">
-                     <img src="buscador-razas.png" alt="Captura de pantalla del e-commerce Sendera Sport" class="project-img">
-                    <div class="project-data">
-                        <h3 class="project-title">Buscador de razas de perros </h3>
-                         <p>sitio web estático desarrollado como buscador para consumir la API de las razas de perros</p>
-                        <div class="project-links">
-                            <a href="https://consumo-api-dogs.vercel.app/" class="project-button" target="_blank">
-                             Ver Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                            <a href="https://github.com/Druiz-leon/consumo-API-dogs.git" class="project-button" target="_blank">
-                             Ver GitHub <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-            <div class="science-content">
-                <div class="work-container container grid">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Sensor+de+Carbon+Dots" alt="Imagen del proyecto 1" class="project-img">
+                    <div class="project-card-main-content">
+                        <img src="westeros-blog.png" alt="Captura de pantalla del blog temático Westeros Blog" class="project-img">
                         <div class="project-data">
-                            <h3 class="project-title">Proyecto 1: Sensor de Puntos de Carbono</h3>
-                            <p>Investigación sobre N-CDs y P-CDs para la detección de colorantes alimentarios.</p>
-                            <a href="#" class="project-button">Ver más <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Tesis+en+LaTeX" alt="Imagen del proyecto 3" class="project-img">
-                        <div class="project-data">
-                            <h3 class="project-title">Proyecto 2: Documento de Tesis</h3>
-                            <p>Maquetación avanzada de documento académico utilizando LaTeX en Overleaf.</p>
-                            <a href="#" class="project-button">Ver PDF <i class="fa-solid fa-file-pdf"></i></a>
+                            <span class="project-category">Blog Temático / Frontend Estático</span> 
+                            <h3 class="project-title">Westeros Blog</h3>
+                            <p class="project-description">
+                                Sitio web estático desarrollado con pasión por un equipo de especialistas en Game of Thrones. Nuestro objetivo es compartir información, curiosidades y análisis profundos sobre la saga.
+                            </p>
+                            <div class="skill-bars-container">
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-html5" style="color: #AFBF75;"></i>
+                                        <span>HTML5</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 95%; background-color: #AFBF75;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-logo-name">
+                                        <i class="fa-brands fa-css3-alt" style="color: #639CBF;"></i>
+                                        <span>CSS3</span>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-bar" style="width: 90%; background-color: #639CBF;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-links project-links-with-buttons"> 
+                                <a href="https://sitio-del-blog.vercel.app/" class="project-button button-filled" target="_blank">
+                                    Ver Demo 
+                                </a>
+                                <a href="https://github.com/Druiz-leon/sitio-del-blog.git" class="project-button button-filled" target="_blank">
+                                    Ver GitHub 
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section class="section" id="experience">
+        <section class="section" id="education">
             <h2 class="section-title">Formación</h2>
             <span class="section-subtitle">Mi trayectoria</span>
-
-            <div class="tech-content">
-                <div class="experience-container container">
-                    <div class="timeline-item">
-                        <h4>2025 - Presente</h4>
-                        <p><strong>Científico de Datos</strong> - Oracle Next Education</p>
-                        <p>Creación de páginas web estáticas y landing pages para clientes.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2025 - Presente</h4>
-                        <p><strong>Bootcamp Java Full-Stack </strong> - Generation Mexico</p>
-                        <p>Formación intensiva en desarrollo frontend y backend.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2023 - 2024</h4>
-                        <p><strong>Desarrollador Frontend </strong> - Oracle Next Education</p>
-                        <p>Formación intensiva en desarrollo frontend.</p>
-                    </div>
-
+            <div class="education-container container grid">
+                
+                <div class="education-item">
+                    <span class="education-date">2025 - Presente</span>
+                    <h3>Científico de Datos</h3>
+                    <p><strong>Oracle Next Education</strong></p>
+                    <p>Creación de páginas web estáticas y landing pages para clientes.</p>
                 </div>
-            </div>
-
-            <div class="science-content">
-                <div class="experience-container container">
-                    <div class="timeline-item">
-                        <h4>2023 - Presente</h4>
-                        <p><strong>Maestría en Ingeniería y Ciencias Aplicadas</strong> - CIICAp-UAEM</p>
-                        <p>Investigación enfocada en síntesis de nanomateriales (Puntos de Carbono).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h4>2021 - 2022</h4>
-                        <p><strong>Asistente de Laboratorio</strong> - CIICAp-UAEM</p>
-                        <p>Preparación de reactivos, calibración de equipos y asistencia en experimentos.</p>
-                    </div>
+                
+                <div class="education-item">
+                    <span class="education-date">2025 - Presente</span>
+                    <h3>Bootcamp Java Full-Stack</h3>
+                    <p><strong>Generation Mexico</strong></p>
+                    <p>Formación intensiva en desarrollo frontend y backend.</p>
+                </div>
+                
+                <div class="education-item">
+                    <span class="education-date">2023 - 2024</span>
+                    <h3>Desarrollador Frontend</h3>
+                    <p><strong>Oracle Next Education</strong></p>
+                    <p>Formación intensiva en desarrollo frontend.</p>
+                </div>
+                
+                <div class="education-item">
+                    <span class="education-date">2023 - Presente</span>
+                    <h3>Maestría en Ingeniería y Ciencias Aplicadas</h3>
+                    <p><strong>CIICAp-UAEM</strong></p>
+                    <p>Investigación enfocada en síntesis de nanomateriales (Puntos de Carbono).</p>
+                </div>
+                
+                <div class="education-item">
+                    <span class="education-date">2021 - 2022</span>
+                    <h3>Asistente de Laboratorio</h3>
+                    <p><strong>CIICAp-UAEM</strong></p>
+                    <p>Preparación de reactivos, calibración de equipos y asistencia en experimentos.</p>
                 </div>
             </div>
         </section>
@@ -270,33 +312,20 @@
             <h2 class="section-title">Contáctame</h2>
             <span class="section-subtitle">Ponte en contacto</span>
             <div class="contact-container container">
-                <p>¿Tienes un proyecto en mente o quieres colaborar? Envíame un mensaje.</p>
-                <a href="mailto:ruiz.leon.deyanira@gmail.com" class="button">
+                <p class="contact-description">¿Tienes un proyecto en mente o quieres colaborar? Envíame un mensaje.</p>
+                <a href="mailto:ruiz.leon.deyanira@gmail.com" class="button button-primary">
                     Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
                 </a>
             </div>
         </section>
     </main>
 
-
-
     <footer class="footer">
-        <div class="tech-content">
-            <div class="footer-container container">
-                <p>Diseñado y codeado por Deyanira Ruiz. &copy; 2025.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/deyanira-ruiz-91a32623b/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/Druiz-leon" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="science-content">
-            <div class="footer-container container">
-                <p>Investigación y desarrollo por Deyanira Ruiz. &copy; 2025.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/deyanira-ruiz-91a32623b/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://orcid.org/0009-0002-3890-6919" aria-label="ORCID" target="_blank"><i class="fa-solid fa-book"></i></a> </div>
+        <div class="footer-container container">
+            <p>Diseñado y codeado por Deyanira Ruiz. &copy; 2025.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/deyanira-ruiz-91a32623b/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Druiz-leon" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </footer>

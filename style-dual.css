@@ -1,36 +1,37 @@
-/* ===== Variables (Tema Ciencia - Default) ===== */
+/* ===== Variables (Nuevo Tema: Verde Oliva/Azul - CLARO) ===== */
 :root {
-    --bg-color: #101010; /* Negro más profundo */
-    --bg-color-light: #1e1e1e;
-    --primary-color: #00FFFF; /* Cian Neón */
-    --text-color: #e0e0e0;
-    --text-color-secondary: #999999;
+    /* Fondos y Texto */
+    --bg-color: #ffffff; /* Blanco puro (Fondo principal, muy claro) */
+    --bg-color-light: #f8f8f8; /* Blanco roto (Fondo de secciones alternas/cards) */
+    --text-color-dark: #333333; /* Gris oscuro para el texto principal (títulos) */
+    --text-color-medium: #555555; /* Gris medio para párrafos */
+    --text-color-light: #8A8C3B; /* Verde Oliva Medio para subtítulos y texto secundario */
     
-    --font-title: "Roboto Mono", monospace; /* Fuente Monospace (Código) */
-    --font-body: "Roboto Mono", monospace;
-    --home-bg-image: url('fondo-tech.jpg'); /* Fondo Matriz/Circuito */
-    --card-border-radius: 0px; /* Angular */
-    --card-hover-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    /* Colores de Acento (Paleta) */
+    --primary-color: #AFBF75; /* Verde Oliva Claro (Botones, Links Activos, Resaltados) */
+    --primary-color-alt: #8A8C3B; /* Verde Oliva Medio (Hover/Acento más fuerte) */
+    --secondary-accent: #639CBF; /* Azul Claro Sucio (Bordes, Líneas, Iconos) */
+    --secondary-accent-light: #84C1D9; /* Azul Cielo Claro (Acentos más claros) */
+    
+    /* Versión RGB para fondos transparentes */
+    --primary-color-rgb: 175, 191, 117; /* AFBF75 */ 
+    --secondary-accent-rgb: 99, 156, 191; /* 639CBF */
+    
+    /* Estilos de Elementos */
+    --font-title: 'Poppins', sans-serif; /* Más moderno para títulos */
+    --font-body: 'Open Sans', sans-serif; /* Más legible para el cuerpo */
+    --card-border-radius: 8px; 
+    --card-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    --card-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada en hover */
+    --header-bg: rgba(255, 255, 255, 0.95); 
+    --header-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+    /* Variables adicionales */
+    --header-height: 4.5rem; /* Altura estándar del header */
 }
 
-/* ===== Variables (Tema Ciencia - Activado) ===== */
-body.science-mode {
-    --bg-color: #1a1a1a;
-    --bg-color-light: #2c2c2c;
-    --primary-color: #00aaff;
-    --text-color: #f0f0f0;
-    --text-color-secondary: #aaaaaa;
-    
-    --font-title: "Playfair Display", serif; /* Fuente Serif (Académica) */
-    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --home-bg-image: url('fondo-2.jpg'); /* Fondo Neurona */
-    --card-border-radius: 16px; /* Redondeado */
-    --card-hover-shadow: 0 5px 25px rgba(0, 170, 255, 0.3);
-}
 
-
-
-/* ===== Reseteo Básico ===== */
+/* ===== Reseteo Básico y Tipografía ===== */
 * {
     margin: 0;
     padding: 0;
@@ -42,56 +43,49 @@ html { scroll-behavior: smooth; }
 body {
     font-family: var(--font-body);
     background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color .3s, color .3s;
+    color: var(--text-color-medium);
+    line-height: 1.7; /* Ligeramente más espaciado para mejor legibilidad */
 }
 
-h1, h2, h3 {
-    color: var(--text-color);
-    font-weight: 600;
+h1, h2, h3, h4 {
+    color: var(--text-color-dark);
     font-family: var(--font-title);
-    transition: color .3s;
+    font-weight: 700;
 }
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
 
 a {
     text-decoration: none;
+    color: var(--primary-color-alt);
+    transition: color .3s ease;
+}
+a:hover {
     color: var(--primary-color);
-    transition: color .3s;
 }
 ul { list-style: none; }
-img { max-width: 100%; height: auto; }
+img { max-width: 100%; height: auto; display: block; }
 
 /* ===== Clases Reutilizables ===== */
 .container {
-    max-width: 1024px;
+    max-width: 1100px; /* Un poco más ancho */
     margin: 0 auto;
     padding: 0 1.5rem;
 }
-.section { padding: 6rem 0 2rem; }
-.section-title { font-size: 2.25rem; text-align: center; }
+.section { padding: 8rem 0 4rem; } /* Más padding para las secciones */
+.section-title { font-size: 2.8rem; text-align: center; margin-bottom: 0.5rem; }
 .section-subtitle {
     display: block;
-    font-size: 1rem;
-    color: var(--text-color-secondary);
+    font-size: 1.1rem;
+    color: var(--text-color-light);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
 }
-.grid { display: grid; gap: 1.5rem; }
-
-/* Por defecto (Modo Tech), ocultamos el contenido de Ciencia */
-.science-content {
-    display: none;
-}
-
-/* Cuando el body tiene la clase .science-mode... */
-body.science-mode .science-content {
-    display: block; /* Mostramos el contenido de Ciencia */
-}
-
-body.science-mode .tech-content {
-    display: none; /* Ocultamos el contenido de Tech */
-}
+.grid { display: grid; gap: 2rem; } /* Más espacio en las cuadrículas */
 
 /* ===== Header y Navegación ===== */
 .header {
@@ -99,8 +93,9 @@ body.science-mode .tech-content {
     position: fixed;
     top: 0; left: 0;
     z-index: 100;
-    background-color: rgba(26, 26, 26, 0.8);
+    background-color: var(--header-bg); 
     backdrop-filter: blur(10px);
+    box-shadow: var(--header-shadow); 
 }
 .nav {
     height: var(--header-height);
@@ -108,226 +103,593 @@ body.science-mode .tech-content {
     justify-content: space-between;
     align-items: center;
 }
-.nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-color); }
-.nav-menu { display: flex; gap: 2rem; }
+.nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--text-color-dark); }
+.nav-menu { display: flex; gap: 2.5rem; }
 .nav-link {
-    color: var(--text-color-secondary);
-    font-weight: 500;
-    transition: color .3s;
+    color: var(--text-color-medium);
+    font-weight: 600;
+    position: relative;
+    padding: 0.25rem 0; /* Más área de click */
+    font-family: var(--font-title);
 }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Línea más gruesa */
+    background-color: var(--primary-color);
+    bottom: -8px; /* Más abajo para no tocar el texto */
+    left: 0;
+    transition: width 0.3s ease-out;
+}
+
 .nav-link:hover,
 .nav-link.active-link {
-    color: var(--primary-color);
+    color: var(--text-color-dark); /* Se oscurece el texto */
+}
+.nav-link.active-link::after {
+    width: 100%; 
 }
 
-/* ===== ESTILOS PARA EL INTERRUPTOR ===== */
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-color-secondary);
-}
-.theme-switch-wrapper .fa-laptop-code { color: #00FFFF; } 
-.theme-switch-wrapper .fa-flask { color: #00aaff; }
-
-.theme-switch {
-    position: relative;
-    display: inline-block;
-    width: 50px; /* Ancho */
-    height: 26px; /* Alto */
-}
-.theme-switch input { opacity: 0; width: 0; height: 0; }
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--bg-color-light);
-    transition: .4s;
-    border-radius: 26px;
-}
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-input:checked + .slider {
-    background-color: var(--primary-color);
-}
-input:checked + .slider:before {
-    transform: translateX(24px);
-}
-/* ======================================= */
-/* ===== Sección Inicio (Hero) ===== */
-#home {
+/* ===== Sección Inicio (Hero) - ESTILO SIMILAR A JIGAR SABLE ===== */
+.home-section {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     position: relative;
     overflow: hidden;
+    padding: var(--header-height) 0 2rem; /* Se ajusta el padding superior para no tapar el header */
+    background-color: var(--bg-color); 
 }
-#home::before {
+
+.home-section::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    /* La imagen se toma de la variable */
-    background-image: var(--home-bg-image); 
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    z-index: -1;
-    transition: background-image .4s;
+    /* Patrón de puntos sutil */
+    background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="%23e0e0e0"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+    background-size: 20px 20px; 
+    opacity: 0.3; 
+    z-index: 0; 
+    pointer-events: none; 
 }
-.home-container { position: relative; z-index: 1; }
-.home-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-.home-content h3 {
-    font-size: 1.5rem;
-    color: var(--text-color-secondary);
-    margin-bottom: 1.5rem;
-}
-.typing-text { color: var(--primary-color); font-weight: 700; }
 
-/* (Copia y pega tus estilos para .home-actions, .social-links, etc. aquí) */
+.home-container {
+    position: relative;
+    z-index: 1;
+    width: 100%; 
+    grid-template-columns: 1.5fr 1fr; 
+    align-items: center; 
+    gap: 4rem; 
+}
+
+.home-content { text-align: left; }
+.home-content .greeting {
+    font-size: 1.5rem;
+    color: var(--text-color-medium);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.home-content h1 { font-size: 4.5rem; margin-bottom: 0.5rem; line-height: 1.1; }
+.home-content h3 {
+    font-size: 2rem;
+    color: var(--text-color-medium);
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+.typing-text { 
+    color: var(--primary-color); 
+    font-weight: 700; 
+}
+
 .home-actions {
     display: flex;
-    align-items: center;
+    flex-direction: column; 
+    align-items: flex-start; 
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-}
-.social-links a {
-    font-size: 1.5rem;
-    color: var(--text-color-secondary);
-    transition: color .3s;
-}
-.social-links a:hover { color: var(--primary-color); }
 
-/* Botones (Usa variables) */
+/* Botones Principales */
 .button {
-    display: inline-block;
+    display: inline-flex; 
+    align-items: center;
+    gap: 0.75rem;
     background-color: var(--primary-color);
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 5px;
+    color: var(--text-color-dark); 
+    padding: 1rem 2.2rem;
+    border-radius: 50px; 
     font-weight: 600;
-    transition: background-color .3s;
-}
-.button:hover {
-    filter: brightness(1.2);
-}
-/* Botón pequeño de CV */
-.home-content .button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    transition: background-color .3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(var(--primary-color-rgb), 0.25);
+    font-family: var(--font-title); 
 }
 
-/* ===== Sección Habilidades (Usa variables) ===== */
-.tech-icons-container {
-    display: flex;
-    flex-wrap: wrap; /* Para que se ajusten en móviles */
-    justify-content: center; /* Centra los iconos */
-    gap: 1.5rem; /* Espacio entre iconos */
-    margin-bottom: 3rem;
+.button:hover {
+    background-color: var(--primary-color-alt);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(var(--primary-color-rgb), 0.35);
 }
+.button i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+.button:hover i {
+    transform: translateX(3px);
+}
+
+/* Iconos Sociales en Home */
+.social-links-home {
+    display: flex; 
+    gap: 1.2rem; 
+    margin-top: 1rem; 
+}
+
+.social-links-home a {
+    font-size: 1.8rem; 
+    color: var(--text-color-medium); 
+    padding: 0.7rem;
+    border-radius: 50%; 
+    background-color: var(--bg-color-light); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-links-home a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px) scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home-illustration {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN DE INICIO SIN CUADRADO Y MÁS GRANDE */
+.home-img {
+    width: 100%;
+    max-width: 520px; /* ¡Imagen más grande! */
+    height: auto;
+    /* Eliminamos el border-radius, box-shadow y border para quitar el cuadrado */
+    border-radius: 0; 
+    box-shadow: none; 
+    border: none;
+    background-color: transparent; 
+}
+
+/* ===== SECCIÓN SOBRE MÍ (ABOUT) ===== */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0;
+}
+.about-container p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color-medium);
+}
+.about-container p strong {
+    color: var(--primary-color-alt);
+    font-weight: 700;
+}
+
+/* ===== Sección Habilidades (Expertise) ===== */
 .expertise-container {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem; 
 }
 .skill-card {
     background-color: var(--bg-color-light);
-    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+    padding: 2.5rem 1.5rem;
     text-align: center;
-    transition: transform .3s, box-shadow .3s, border-radius .3s;
-    /* Las variables controlan el estilo */
+    transition: transform .3s ease, box-shadow .3s ease;
     border-radius: var(--card-border-radius); 
+    box-shadow: var(--card-shadow-light);
 }
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-8px); 
+    box-shadow: var(--card-shadow-hover);
 }
 .skill-card i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-size: 3.5rem; 
+    color: var(--secondary-accent); 
+    margin-bottom: 1.5rem;
+}
+.skill-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color-dark);
+}
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-color-medium);
 }
 
-/* ===== Sección Contacto ====== */
-.contact-container {
-    max-width: 600px; /* Limita el ancho para que no sea tan largo */
-    margin: 0 auto; /* Centra el contenedor */
-    text-align: center; /* Centra el texto y el botón */
+
+/* ===== ESTILOS PARA TARJETAS DE PROYECTO (Flujo Mejorado) ===== */
+.work-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 3rem; 
 }
 
-.contact-container p {
-    font-size: 1.1rem;
-    color: var(--text-color-secondary);
-    margin-bottom: 2rem;
+.project-card {
+    background-color: var(--bg-color); 
+    border-radius: var(--card-border-radius); 
+    box-shadow: var(--card-shadow-light); 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+    transition: transform .3s ease, box-shadow .3s ease; 
+}
+
+.project-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: var(--card-shadow-hover);
+}
+
+.project-card-header {
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color-light); 
+    color: var(--text-color-light); 
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-card-main-content {
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
 }
 
 .project-img {
-    width: 100%;       /* Ocupa el 100% del ancho de la tarjeta */
-    height: 300px;     /* Mantiene una altura fija para uniformidad */
-    object-fit: cover; /* Rellena el espacio sin deformarse (recorta si es necesario) */
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover;
+    display: block; 
 }
 
 .project-data {
     padding: 1.5rem;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.project-category {
+    font-size: 0.85rem;
+    color: var(--secondary-accent); 
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .project-title {
-    font-size: 1.25rem;
+    font-size: 1.8rem; 
+    margin-bottom: 0.8rem;
+    color: var(--text-color-dark);
+}
+
+/* DESCRIPCIÓN DE PROYECTO MÁS GRANDE */
+.project-description {
+    font-size: 1.05rem; /* ¡Texto ligeramente más grande! */
+    color: var(--text-color-medium);
+    margin-bottom: 1.5rem;
+    flex-grow: 1; 
+}
+
+/* Barras de Habilidad - Estilos más limpios */
+.skill-bars-container {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    gap: 0.8rem;
+}
+.skill-logo-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px; 
+    font-size: 0.9rem;
+    color: var(--text-color-medium);
+    font-weight: 500;
+}
+.skill-logo-name i {
+    font-size: 1.1rem;
+}
+.skill-bar-wrapper {
+    flex-grow: 1;
+    background-color: #e6e6e6; /* Fondo gris claro armonizado */
+    border-radius: 50px;
+    height: 8px; 
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+.skill-bar {
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0; left: 0;
+    transition: width 0.8s ease-out;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    margin-top: auto; 
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08); 
+    justify-content: flex-start;
+}
+
+.project-links .project-button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color-alt);
+    background-color: transparent; 
+    color: var(--primary-color-alt);
+}
+.project-links .project-button:hover {
+    background-color: var(--primary-color-alt);
+    color: var(--text-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.project-links .project-button.button-filled {
+    background-color: var(--primary-color); 
+    color: var(--text-color-dark);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.2);
+}
+.project-links .project-button.button-filled:hover {
+    background-color: var(--primary-color-alt); 
+    border-color: var(--primary-color-alt);
+    color: var(--text-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* ===== SECCIÓN FORMACIÓN (Education) - ESTILO MODERNO Y LIMPIO (Grid Cards) ===== */
+.education-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; 
+}
+
+.education-item {
+    background-color: var(--bg-color-light);
+    border-radius: var(--card-border-radius);
+    padding: 2rem;
+    box-shadow: var(--card-shadow-light);
+    transition: transform .3s ease, box-shadow .3s ease;
+    position: relative;
+    border-left: 5px solid var(--secondary-accent); 
+}
+
+.education-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.education-item .education-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--secondary-accent); 
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.education-item h3 {
+    font-size: 1.6rem;
+    color: var(--text-color-dark);
     margin-bottom: 0.5rem;
 }
 
-/* NUEVO: Contenedor para los enlaces del proyecto */
-.project-links {
-    display: flex;       /* Pone los enlaces en fila */
-    flex-wrap: wrap;     /* Los apila en pantallas pequeñas si no caben */
-    gap: 1.5rem;         /* Espacio entre "Ver Demo" y "Ver GitHub" */
-    margin-top: 1rem;    /* Espacio entre la descripción y los enlaces */
-}
-
-/* ESTILO para los enlaces del proyecto */
-.project-button {
-    display: inline-flex; /* Permite alinear el texto y el icono */
-    align-items: center;
-    gap: 0.35rem;         /* Espacio entre el texto y el icono */
-    
-    color: var(--primary-color); /* Usa el color del tema activo */
+.education-item p strong {
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: filter .3s;
+    color: var(--text-color-medium);
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
-.project-button:hover {
-    text-decoration: underline;
-    filter: brightness(1.2); /* Un leve brillo al pasar el ratón */
+.education-item p {
+    font-size: 0.95rem;
+    color: var(--text-color-medium);
 }
+
+
+/* ===== SECCIÓN CONTACTO (Centrado) ===== */
+#contact {
+    text-align: center; 
+}
+
+.contact-container {
+    max-width: 600px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem; 
+}
+
+.contact-description {
+    font-size: 1.1rem;
+    color: var(--text-color-medium);
+    margin-bottom: 1rem;
+}
+
 
 /* ===== Footer ===== */
 .footer {
     background-color: var(--bg-color-light);
-    padding: 2rem 0;
-    margin-top: 4rem;
-    transition: background-color .3s; /* Para el cambio de tema */
+    padding: 2.5rem 0;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
-    gap: 1rem; /* Espacio por si se envuelve */
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
 }
 
 .footer-container p {
-    color: var(--text-color-secondary);
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+}
+
+.footer-container .social-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-container .social-links a {
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+}
+
+.footer-container .social-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ===== Media Queries (Responsividad) ===== */
+@media screen and (max-width: 992px) {
+    .home-container {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 3rem; 
+    }
+
+    .home-content {
+        order: 2; 
+        text-align: center;
+    }
+    .home-content .greeting {
+        font-size: 1.3rem;
+    }
+    .home-content h1 {
+        font-size: 3.5rem; 
+    }
+    .home-content h3 {
+        font-size: 1.6rem; 
+    }
+    
+    .home-actions {
+        justify-content: center; 
+        flex-direction: column; 
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .social-links-home {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .home-illustration {
+        order: 1; 
+    }
+    .home-img {
+        max-width: 350px;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    .section-title { font-size: 2.2rem; }
+    .section-subtitle { margin-bottom: 3rem; }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none; 
+    }
+    .nav-logo { font-size: 1.5rem; }
+    .header {
+        padding: 0 1rem;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    .home-content h3 {
+        font-size: 1.4rem;
+    }
+    .button {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
+    }
+    .social-links-home a {
+        font-size: 1.5rem;
+        padding: 0.6rem;
+    }
+    .home-img {
+        max-width: 300px;
+    }
+
+    .expertise-container {
+        grid-template-columns: 1fr;
+    }
+    .skill-card {
+        padding: 2rem 1rem;
+    }
+
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+    .project-card-main-content {
+        flex-direction: column;
+    }
+    .project-img {
+        height: 200px;
+    }
+
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+    .education-item {
+        padding: 1.5rem;
+    }
+    .education-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+    .home-content .greeting {
+        font-size: 1.2rem;
+    }
+    .section-title { font-size: 2rem; }
+    .section-subtitle { font-size: 1rem; }
 }
