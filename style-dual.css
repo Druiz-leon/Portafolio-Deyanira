@@ -291,6 +291,10 @@ img { max-width: 100%; height: auto; display: block; }
     border-radius: var(--card-border-radius); 
     box-shadow: var(--card-shadow-light);
 }
+.skill-card p strong{
+    color: var(--primary-color-alt);
+    font-weight: 700;
+}
 .skill-card:hover {
     transform: translateY(-8px); 
     box-shadow: var(--card-shadow-hover);
